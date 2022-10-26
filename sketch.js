@@ -1,3 +1,9 @@
+// input stuck to cloud
+// rain animation
+// flower growing
+// cloud changing color
+// rain based on value of input
+
 var cnv;
 
 function centerCanvas() {
@@ -10,7 +16,7 @@ function setup() {
   cnv = createCanvas(500, 700);
   centerCanvas();
   let inp = createInput();
-  inp.position(50,50);
+  inp.position(275,250);
 inp.size(200, 40);
 inp.input(myInputEvent);
 }
