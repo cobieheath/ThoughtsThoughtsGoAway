@@ -31,6 +31,8 @@ function windowResized() {
   centerCanvas();
 }
 
+var h = 0
+
 function draw() {
   background(106, 175, 184);
   if (stage == "raining") {
@@ -41,7 +43,13 @@ function draw() {
     }
   }
   if (stage == "flowering"){
-
+    rect(width/2, 625, 10, h++)
+    if (h >= 120) {
+      h = 120
+      fill(252, 240, 63)
+      ellipse(width/2, 565, 20)
+      ellipse(width/2, 550, 10)
+    }
   }
   fill(106, 175, 184)
   rect(width/2, 0, 500, 320) //sky
