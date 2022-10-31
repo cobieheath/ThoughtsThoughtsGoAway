@@ -31,22 +31,23 @@ function windowResized() {
   centerCanvas();
 }
 
-let enterTime
-
 function draw() {
   background(106, 175, 184);
   if (stage == "raining") {
     fill(46, 89, 158)
-    rect(width/2, frameCount, 200, 400)
-    if (millis() - enterTime >= 3000) {
-      stage = "flowering"
+    rect(width/2, frameCount*6, 200, 400) //rain 
+    if (frameCount > 140) {
+      stage = "flowering";
     }
   }
+  if (stage == "flowering"){
+
+  }
   fill(106, 175, 184)
-  rect(width/2, 0, 500, 320)
+  rect(width/2, 0, 500, 320) //sky
   fill(81, 148, 88)
   noStroke()
-  rect(width/2, 665, 500, 75)
+  rect(width/2, 665, 500, 75) //ground
   fill(255)
   ellipse(250, 125, 125)
   ellipse(200, 150, 125)
@@ -59,8 +60,6 @@ function draw() {
 function keyPressed() {
   if (keyCode === ENTER) {
     stage = "raining"
-    // record the current timestamp (millis()) in a variable called enterPressedTimestamp
-    enterTime = millis();
-
+    inp.value('');
   }
 }
