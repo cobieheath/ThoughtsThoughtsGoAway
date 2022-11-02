@@ -1,8 +1,3 @@
-// rain animation
-// flower growing
-// cloud changing color
-// rain based on value of input
-
 var cnv,inp;
 var stage = "typing";
 
