@@ -34,7 +34,8 @@ function windowResized() {
 var h = 0
 
 function draw() {
-  background(106, 175, 184);
+  background(70, 231, 241);
+  
   if (stage == "raining") {
     fill(46, 89, 158)
     rect(width/2, frameCount*6, 200, 400) //rain 
@@ -43,17 +44,22 @@ function draw() {
     }
   }
   if (stage == "flowering"){
-    rect(width/2, 625, 10, h++)
+    fill(70, 215, 19)
+    rect(width/2, 625, 10, h++) //stem
     if (h >= 120) {
       h = 120
       fill(252, 240, 63)
+      ellipse(width/2, 550, 15)
+      ellipse(width/2,580,15)
+      ellipse((width/2)-15, 565,15)
+      ellipse((width/2)+15, 565,15)
+      fill(151, 66, 41)
       ellipse(width/2, 565, 20)
-      ellipse(width/2, 550, 10)
     }
   }
-  fill(106, 175, 184)
+  fill(70, 231, 241)
   rect(width/2, 0, 500, 320) //sky
-  fill(81, 148, 88)
+  fill(31, 188, 24)
   noStroke()
   rect(width/2, 665, 500, 75) //ground
   fill(255)
